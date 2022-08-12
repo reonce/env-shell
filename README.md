@@ -1,4 +1,4 @@
-# env-switch
+# env-shell
 一个切换本地开发环境的插件
 
 使用它，会更方便的修改本地.env.development.local文件中的REACT_APP_API_HOST值
