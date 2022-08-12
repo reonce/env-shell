@@ -1,15 +1,15 @@
 {
-  "name": "srenv",
+  "name": "swenv",
   "author": "reonce",
   "version": "1.0.0",
-  "description": "switch the react environment",
+  "description": "switch the environment",
   "main": "src/index",
   "license": "MIT",
   "dependencies": {
     "inquirer": "^8.2.4"
   },
   "bin": {
-    "senv": "bin/index.js"
+    "env": "bin/index.js"
   },
   "scripts": {
     "env": "node src/index"
