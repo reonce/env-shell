@@ -1,6 +1,6 @@
 const envMap = {
-  测试环境: "test",
-  预发布: "pre",
-  生产环境: "production",
+  测试环境: "TEST_HOST",
+  预发布: "PRE_HOST",
+  生产环境: "PRO_HOST",
 };
 module.exports = { envMap };

@@ -5,9 +5,11 @@ const { envMap } = require("../static.js");
 
 const ENV_PATH = path.resolve(process.cwd(), ".env.development.local");
 const ENV_FS = fs.readFileSync(ENV_PATH, "utf-8");
+const DEFAULT_KEY = "REACT_APP_API_HOST";
 
 const handleFile = (file, envMode) => {
-  const obj = Object.create(null);
+  const obj = {},
+    newHandledObj = {};
   file
     .toString()
     .split("\n")
@@ -20,10 +22,18 @@ const handleFile = (file, envMode) => {
     });
   if (!obj[envMode]) {
     throw new Error(
-      "在.env.development.local文件中找不到环境地址信息。\nPS: 测试、预发布、生产环境对应的键名分别为test、pre、production\n例如选择测试环境需要在文件中写入 test='http: test.dev.com'"
+      "在.env.development.local文件中找不到环境地址信息。\nPS: 测试、预发布、生产环境对应的键名分别为TEST_HOST、PRE_HOST、PRO_HOST\n示例模版如下:\n TEST_HOST='http:test.dev.com'\n PRE_HOST='http: pre.dev.com'\n PRO_HOST='http: pro.dev.com'"
     );
   }
-  return { ...obj, REACT_APP_API_HOST: obj[envMode] };
+  if (obj["ENVSH_HOST"]) {
+    const keys = obj["ENVSH_HOST"].split(",");
+    keys.forEach((key) => {
+      newHandledObj[key] = obj[envMode];
+    });
+  } else {
+    newHandledObj[DEFAULT_KEY] = obj[envMode];
+  }
+  return { ...obj, ...newHandledObj };
 };
 
 const writeEnvFile = (handledObj) => {
@@ -59,5 +69,5 @@ const checkEnv = () => {
       throw new Error(err);
     });
 };
-
+checkEnv();
 module.exports = checkEnv;
