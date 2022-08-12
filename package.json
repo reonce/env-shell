@@ -1,6 +1,8 @@
 {
-  "name": "senv",
+  "name": "srenv",
+  "author": "reonce",
   "version": "1.0.0",
+  "description": "switch the react environment",
   "main": "src/index",
   "license": "MIT",
   "dependencies": {
