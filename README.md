@@ -16,12 +16,12 @@ production=https://production.com
 ~~~
 
 ## 用法1：
-在根目录下运行 `npx envsw`
+在根目录下运行 `npx envsh`
 
 > 直接使用npx会很方便，但是npx下载依赖(用完会清除)会带来延迟，因此推荐用法2
 ## 用法2
 你也可以 在目录中添加此包，体验无延迟的切换脚本
-* 根目录下运行 `npm install envsw --save-dev` 或者 `yarn add envsw --dev` 
+* 根目录下运行 `npm install envsh --save-dev` 或者 `yarn add envsh --dev` 
 * 根目录下运行 `npx envs` 即可体验快速切换环境
 
 源码地址： https://github.com/reonce/env-switch
