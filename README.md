@@ -18,4 +18,5 @@ production=https://production.com
 直接使用npx会很方便，但是下载依赖会带来延迟
 
 你也可以 在目录中添加此包，体验无延迟的切换脚本
-* 根目录下运行 `npm install --save --dev envsw` 或者 `yarn add -D envsw`
+* 根目录下运行 `npm install envsw --save-dev` 或者 `yarn add envsw --dev`
+之后在根目录下运行 `npx envs` 体验快速切换环境

@@ -1,7 +1,7 @@
 {
   "name": "envsw",
   "author": "reonce",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "environment switch",
   "main": "src/index",
   "license": "MIT",
@@ -9,7 +9,7 @@
     "inquirer": "^8.2.4"
   },
   "bin": {
-    "envsw": "bin/index.js"
+    "envs": "bin/index.js"
   },
   "scripts": {
     "env": "node src/index"
