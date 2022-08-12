@@ -1,8 +1,8 @@
 {
-  "name": "swenv",
+  "name": "envsw",
   "author": "reonce",
   "version": "1.0.0",
-  "description": "switch the environment",
+  "description": "environment switch",
   "main": "src/index",
   "license": "MIT",
   "dependencies": {
