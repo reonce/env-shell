@@ -1,7 +1,7 @@
 {
   "name": "envsh",
   "author": "reonce",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "environment shell",
   "main": "src/index",
   "license": "MIT",
