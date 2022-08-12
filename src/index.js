@@ -1,7 +1,7 @@
-import fs from "fs";
-import path from "path";
-import inquirer from "inquirer";
-import { envMap } from "./static.js";
+const fs = require("fs");
+const path = require("path");
+const inquirer = require("inquirer");
+const { envMap } = require("../static.js");
 
 const ENV_PATH = path.resolve(process.cwd(), ".env.development.local");
 const ENV_FS = fs.readFileSync(ENV_PATH, "utf-8");
@@ -27,11 +27,16 @@ const handleFile = (file, envMode) => {
 };
 
 const writeEnvFile = (handledObj) => {
-  let result = "";
-  Object.keys(handledObj).forEach((key) => {
-    result += `${key}=${handledObj[key]}\n`;
-  });
-  fs.writeFileSync(ENV_PATH, result);
+  try {
+    let result = "";
+    Object.keys(handledObj).forEach((key) => {
+      result += `${key}=${handledObj[key]}\n`;
+    });
+    fs.writeFileSync(ENV_PATH, result);
+    console.log("切换环境成功!");
+  } catch (error) {
+    throw new Error("写文件报错了:", error);
+  }
 };
 
 const checkEnv = () => {
@@ -55,4 +60,4 @@ const checkEnv = () => {
     });
 };
 
-export default checkEnv;
+module.exports = checkEnv;

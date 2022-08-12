@@ -1,14 +1,15 @@
 {
-  "name": "switch-env",
+  "name": "senv",
   "version": "1.0.0",
-  "main": "index.js",
-  "type": "commonjs",
+  "main": "src/index",
   "license": "MIT",
   "dependencies": {
-    "inquirer": "^9.1.0"
+    "inquirer": "^8.2.4"
   },
-  "bin": "node ./index.js",
+  "bin": {
+    "senv": "bin/index.js"
+  },
   "scripts": {
-    "env": "node ./index.js"
+    "env": "node src/index"
   }
 }
