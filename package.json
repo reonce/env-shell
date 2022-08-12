@@ -9,7 +9,7 @@
     "inquirer": "^8.2.4"
   },
   "bin": {
-    "env": "bin/index.js"
+    "envsw": "bin/index.js"
   },
   "scripts": {
     "env": "node src/index"
