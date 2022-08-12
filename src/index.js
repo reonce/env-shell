@@ -69,5 +69,5 @@ const checkEnv = () => {
       throw new Error(err);
     });
 };
-checkEnv();
+
 module.exports = checkEnv;
